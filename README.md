@@ -142,7 +142,7 @@ Your files might look like this:
 title: English title
 
 # lang_de.yml
-title: Deutsch titel
+title: Deutscher Titel
 ```
 
 Now in your layouts or includes you can reference these dictionaries under the global variable `lang`. The configured page or post
@@ -153,7 +153,7 @@ language will determine which language dictionary is used. For example:
 {{ lang.title }} => English title
 
 # On a page or post where lang: de
-{{ lang.title }} => Deutsch titel
+{{ lang.title }} => Deutscher Titel
 ```
 
 If no language is configured for a page or post, it will default to the site's default language.
@@ -178,7 +178,7 @@ This will create a unique key and automatically write it to the YAML front-matte
 example:
 
 ```
-$ octopress id _posts/2015-02-02-english-post.md _posts/2015-02-02-deutsch-post.md _posts/2015-02-02-espanol-post.md
+$ octopress id _posts/2015-02-02-english-post.md _posts/2015-02-02-deutscher-post.md _posts/2015-02-02-espanol-post.md
 ```
 
 This will add `translation_id: fcdbc7e82b45346d67cced3523a2f236` to the YAML front-matter of each of these posts. There's nothing special about this key except that it is unique. If you want to write your own you can, it'll work just fine.
@@ -190,7 +190,7 @@ When you have posts or pages with a `translation_id` you can use the `translatio
 {% translations post %} # In a post loop
 
 # Which outputs:
-<a class='translation-link lang-de' href='/de/2015/02/02/deutsch-post'>Deutsch</a>, <a class='translation-link lang-es' href='/es/2015/02/02/espanol-post'>Español</a>
+<a class='translation-link lang-de' href='/de/2015/02/02/deutscher-post'>Deutsch</a>, <a class='translation-link lang-es' href='/es/2015/02/02/espanol-post'>Español</a>
 
 # If you prefer a list:
 {% translation_list post %}
@@ -198,7 +198,7 @@ When you have posts or pages with a `translation_id` you can use the `translatio
 # Which ouputs:
 <ul class='translation-list'>
   <li class='translation-item lang-de'>
-    <a class='translation-link lang-de' href='/de/2015/02/02/deutsch-post'>Deutsch</a>
+    <a class='translation-link lang-de' href='/de/2015/02/02/deutscher-post'>Deutsch</a>
   </li>
   <li class='translation-item lang-es'>
     <a class='translation-link lang-es' href='/es/2015/02/02/espanol-post'>Español</a>
