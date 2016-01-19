@@ -12,4 +12,4 @@ tags:
  - good
 ---
 
-Dies wird in deutscher Sprache.
+Dieser Eintrag ist in deutscher Sprache verfasst.
